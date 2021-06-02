@@ -1,4 +1,12 @@
 module.exports = {
+    siteMetadata: {
+        title: "Tmwlsh Blog",
+        titleTemplate: "%s · Tmwlsh Blog",
+        description: "The incessant ramblings of an ill-informed web developer",
+        url: "https://www.tmwlsh.co.uk",
+        image: "/images/share-image.jpg", // Path to your image you placed in the 'static' folder
+        twitterUsername: "@tompcw",
+    },
     plugins: [
         `gatsby-plugin-sass`,
         {

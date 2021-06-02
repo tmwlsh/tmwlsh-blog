@@ -4,9 +4,8 @@ import { Container } from "../container";
 import * as styles from "./styles.module.scss";
 
 const BlogPostContent = ({post}) => {
-  console.log('post', post);
   return (
-    <div className={styles.blogPostContentWrappr}>
+    <div>
       <Container size="small">
         <p className={styles.blogPostDate}>{post.date}</p>
         <h1 className={styles.blogPostTitle}>{post.title.text}</h1>

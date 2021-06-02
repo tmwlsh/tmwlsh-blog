@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { Helmet } from "react-helmet";
 import { Layout } from '../components/layout';
 import { BlogPostContent } from '../components/blogPostContent';
+import { SEO } from "../components/SEO";
 import ShareImage from "../images/share-image.jpg";
 
 const BlogTemplate = ({ data }) => {
@@ -12,13 +13,14 @@ const BlogTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO
+        title={post.title.text}
+        description={post.excerpt.text}
+        image={ShareImage}
+        article={true}
+      />
       <Helmet>
         <title>{`Tmwlsh | ${post.title.text}`}</title>
-        <meta property="og:url" content={`https://www.tmwlsh.co.uk/blog/${post.title.text.replace(/\s+/g, '-').toLowerCase()}`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={post.title.text} />
-        <meta property="og:description" content={post.excerpt.text} />
-        <meta property="og:image" content={`https://www.tmwlsh.co.uk${ShareImage}`} />
       </Helmet>
       <BlogPostContent post={post} />
     </Layout>
