@@ -14,11 +14,11 @@ const BlogTemplate = ({ data }) => {
     <Layout>
       <Helmet>
         <title>{`Tmwlsh | ${post.title.text}`}</title>
-        <meta property="og:url" content={`https://www.tmwlsh.co.uk/blog/${post.uid}`} />
+        <meta property="og:url" content={`https://www.tmwlsh.co.uk/blog/${post.title.text.replace(/\s+/g, '-').toLowerCase()}`} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title.text} />
         <meta property="og:description" content={post.excerpt.text} />
-        <meta property="og:image" content={ShareImage} />
+        <meta property="og:image" content={`https://www.tmwlsh.co.uk${ShareImage}`} />
       </Helmet>
       <BlogPostContent post={post} />
     </Layout>

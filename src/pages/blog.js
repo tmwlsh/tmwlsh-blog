@@ -13,7 +13,7 @@ const BlogPage = () => {
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Tmwlsh Blog" />
         <meta property="og:description" content="The incessant ramblings of an ill-informed web developer" />
-        <meta property="og:image" content={ShareImage} />
+        <meta property="og:image" content={`https://www.tmwlsh.co.uk${ShareImage}`} />
       </Helmet>
       <BlogPosts />
     </Layout>
