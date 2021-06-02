@@ -18,6 +18,12 @@ module.exports = {
                     include: /svgs/
                 }
             }
+        },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                icon: `src/images/favicon.png`
+            },
         }
     ]
 }
