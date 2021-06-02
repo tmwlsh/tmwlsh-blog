@@ -24,6 +24,17 @@ module.exports = {
             options: {
                 icon: `src/images/favicon.png`
             },
-        }
+        },
+        {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+                trackingIds: [
+                    "G-D6BCVCQS6C"
+                ],
+                pluginConfig: {
+                    head: true
+                },
+            },
+        },
     ]
 }
