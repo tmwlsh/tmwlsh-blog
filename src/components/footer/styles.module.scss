@@ -1,0 +1,45 @@
+@import "../../sass/variables.scss";
+
+.footer {
+  padding: 20px 0;
+
+  @media all and (min-width: $tablet) {
+    padding: 40px 0;
+  }
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+    color: $white;
+    padding: 10px;
+    font-size: 14px;
+    display: inline-block;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      list-style-type: none;
+
+      a {
+        color: $white;
+        padding: 10px;
+        font-size: 14px;
+        display: inline-block;
+        text-decoration: none;
+      }
+    }
+  }
+}

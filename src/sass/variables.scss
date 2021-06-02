@@ -1,0 +1,21 @@
+@import "./fonts.scss";
+
+// colours
+
+$black: #000000;
+$white: #ffffff;
+
+// fonts
+
+$poppins: 'Poppins', sans-serif;
+$yaseva: 'Yeseva One', cursive;
+
+// breakpoints
+
+$mobile: 768px;
+$tablet: 960px;
+$desktop: 1400px;
+
+// misc
+
+$transition: cubic-bezier(.9,.23,.18,.77);
