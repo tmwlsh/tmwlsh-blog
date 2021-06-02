@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Helmet } from "react-helmet";
 import { Layout } from '../components/layout';
 import { BlogPostContent } from '../components/blogPostContent';
 
@@ -7,8 +8,13 @@ const BlogTemplate = ({ data }) => {
 
   const post = data.allPrismicBlogPost.nodes[0].data;
 
+  console.log('post', post);
+
   return (
     <Layout>
+      <Helmet>
+        <title>{`Tmwlsh | ${post.title.text}`}</title>
+      </Helmet>
       <BlogPostContent post={post} />
     </Layout>
   )
