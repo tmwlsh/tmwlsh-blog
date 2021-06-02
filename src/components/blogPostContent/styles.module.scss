@@ -1,5 +1,9 @@
 @import "../../sass/variables.scss";
 
+.blog-post-wrapper {
+  padding: 50px 0;
+}
+
 .blog-post-date {
   margin: 0;
   font-size: 12px;
@@ -28,5 +32,9 @@
 
   * {
     color: rgba($white, 0.8);
+  }
+
+  a {
+    color: #fe4626;
   }
 }

@@ -5,7 +5,7 @@ import * as styles from "./styles.module.scss";
 
 const BlogPostContent = ({post}) => {
   return (
-    <div>
+    <div className={styles.blogPostWrapper}>
       <Container size="small">
         <p className={styles.blogPostDate}>{post.date}</p>
         <h1 className={styles.blogPostTitle}>{post.title.text}</h1>
