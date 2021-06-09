@@ -22,7 +22,7 @@ const IndexPage = () => {
         <title>Tmwlsh | Blog</title>
       </Helmet>
       <HomeHeader />
-      <BlogPosts />
+      <BlogPosts num={3} />
     </Layout>
   )
 }

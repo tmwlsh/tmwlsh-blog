@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Helmet } from "react-helmet";
 import { Layout } from "../components/layout";
+import { PageTitle } from "../components/pageTitle";
 import { BlogPosts } from "../components/blogPosts";
 import { SEO } from "../components/SEO";
 import ShareImage from "../images/share-image.jpg";
@@ -17,6 +18,7 @@ const BlogPage = () => {
       <Helmet>
         <title>Tmwlsh | Blog</title>
       </Helmet>
+      <PageTitle title="Blog" />
       <BlogPosts />
     </Layout>
   )

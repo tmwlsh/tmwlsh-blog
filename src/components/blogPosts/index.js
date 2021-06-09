@@ -5,7 +5,7 @@ import Arrow from "../../svgs/right-arrow.svg";
 
 import * as styles from "./styles.module.scss";
 
-const BlogPosts = () => {
+const BlogPosts = ({num=1000}) => {
 
   const blogData = useStaticQuery(graphql`
     query BlogPostsQuery {
@@ -30,8 +30,9 @@ const BlogPosts = () => {
     }
   `)
 
-  const BlogPosts = () => blogData.allPrismicBlogPost.nodes.map(item => {
-    console.log('item', item);
+  const slicedBlogs = blogData.allPrismicBlogPost.nodes.slice(0, num);
+
+  const BlogPosts = () => slicedBlogs.map(item => {
     return (
       <li className={styles.blogPostBlock} key={item.id}>
         <p className={styles.date}>{item.data.date}</p>
