@@ -8,7 +8,6 @@ import ShareImage from "../images/share-image.jpg";
 
 const BlogTemplate = ({ data }) => {
 
-
   const post = data.allPrismicBlogPost.nodes[0].data;
 
   return (

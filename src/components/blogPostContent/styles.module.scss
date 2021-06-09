@@ -30,6 +30,13 @@
 .blog-post-content {
   padding: 20px 0;
 
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 40px 0;
+  }
+
   * {
     color: rgba($white, 0.8);
   }
