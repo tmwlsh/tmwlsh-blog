@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import { Layout } from "../components/layout";
+import { ViewAll } from "../components/viewAll";
 import { HomeHeader } from "../components/homeHeader";
 import { BlogPosts } from "../components/blogPosts";
 import { SEO } from "../components/SEO";
@@ -23,6 +24,7 @@ const IndexPage = () => {
       </Helmet>
       <HomeHeader />
       <BlogPosts num={3} />
+      <ViewAll />
     </Layout>
   )
 }
