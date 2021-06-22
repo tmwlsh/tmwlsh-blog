@@ -46,7 +46,6 @@ module.exports = {
                     head: true
                 },
             },
-        },
-        'gatsby-plugin-catch-links'
+        }
     ]
 }
