@@ -9,7 +9,7 @@ const BlogPosts = ({num=1000}) => {
 
   const blogData = useStaticQuery(graphql`
     query BlogPostsQuery {
-      allPrismicBlogPost {
+      allPrismicBlogPost( sort: {fields: data___date, order: DESC} ) {
         nodes {
           id
           uid
