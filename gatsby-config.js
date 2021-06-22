@@ -1,3 +1,5 @@
+const linkResolver = require('./src/utils/linkResolver')
+
 module.exports = {
     siteMetadata: {
         title: "Tmwlsh Blog",
@@ -14,6 +16,7 @@ module.exports = {
             accessToken: `${process.env.API_KEY}`,
             options: {
                 repositoryName: 'tmwlsh-blog',
+                linkResolver: linkResolver,
                 schemas: {
                     blog_post: require("./src/schemas/blog_post.json")
                 }
@@ -44,5 +47,6 @@ module.exports = {
                 },
             },
         },
+        'gatsby-plugin-catch-links'
     ]
 }

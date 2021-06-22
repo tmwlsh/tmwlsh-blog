@@ -1,4 +1,5 @@
 const path = require('path')
+const { urlMap } = require('./src/utils/urls')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -30,7 +31,7 @@ exports.createPages = async ({ graphql, actions }) => {
     // Creates blog posts at /blog/post_url.
     console.log(`Creating blog posts at ${post.uid}.`)
     createPage({
-      path: `/blog/${post.uid}`,
+      path: `${urlMap.blog_post}${post.uid}`,
       component: path.resolve(__dirname, 'src/templates/post.js'),
       context: { ...post },
     })
