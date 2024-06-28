@@ -2,6 +2,7 @@
 
 .header {
   text-align: center;
+  padding: 50px 0 0 0;
   margin-bottom: 100px;
 
   opacity: 0;
@@ -13,28 +14,27 @@
     transform: translateY(0);
   }
 
-  .site-link {
-    padding: 30px;
-    display: inline-block;
-    text-decoration: none;
-
-    svg {
-      width: 30px;
-    }
-  }
-
   h2 {
     color: $beige;
     display: none;
-    margin: 0;
     font-size: 14px;
     line-height: 1em;
     font-weight: 600;
+    margin: 0 0 60px 0;
     text-transform: uppercase;
+
+    @media all and (min-width: $mobile) {
+      display: block;
+    }
+
+    @media all and (min-width: $desktop) {
+      font-size: 18px;
+      margin: 0 0 90px 0;
+    }
   }
 
   h1 {
-    margin: 10px auto 0 auto;
+    margin: 0 auto;
     color: $beige;
     font-size: 28px;
     line-height: 1em;
@@ -48,9 +48,22 @@
       margin: 20px 0 0 0;
       line-height: 1em;
     }
+
+    @media all and (min-width: $mobile) {
+      font-size: 48px;
+    }
+
+    @media all and (min-width: $desktop) {
+      font-size: 96px;
+
+      span {
+        font-size: 14px;
+        margin: 30px 0 0 0;
+      }
+    }
   }
 
-  a:not(.site-link) {
+  a {
     color: $beige;
     font-size: 14px;
     margin: 25px 0 0 0;
@@ -62,70 +75,13 @@
     position: relative;
   }
 
-  @media all and (min-width: $mobile) {
-    h1 {
-      font-size: 48px;
-      margin: 60px 0 0 0;
-    }
-
-    h2 {
-      display: block;
-      margin: 50px 0 0 0;
-    }
-
-    .site-link {
-      padding: 0;
-
-      svg {
-        display: none;
-      }
-    }
-  }
-
   @media all and (min-width: $tablet) {
     padding: 60px 0 0 0;
     margin-bottom: 150px;
   }
 
   @media all and (min-width: $desktop) {
-    h1 {
-      font-size: 96px;
-      margin: 90px auto 0 auto;
-
-      span {
-        font-size: 14px;
-        margin: 30px 0 0 0;
-      }
-    }
-
-    h2 {
-      font-size: 18px;
-    }
-
-    .site-link {
-      position: relative;
-
-      &::after {
-        height: 2px;
-        width: 0;
-        background-color: $beige;
-        content: '';
-        opacity: 0;
-        bottom: -10px;
-        left: 0;
-        position: absolute;
-        transition: $transitionMed;
-      }
-
-      &:hover {
-        &::after {
-          opacity: 1;
-          width: 100%;
-        }
-      }
-    }
-
-    a:not(.site-link) {
+    a {
       font-size: 18px;
       padding: 10px 20px;
       margin: 36px 0 0 0;

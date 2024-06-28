@@ -1,0 +1,57 @@
+@import "../../sass/variables.scss";
+
+.interests {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: $transitionMed;
+
+  &.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h3 {
+    color: $beige;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.2em;
+    margin: 0 0 20px 0;
+  }
+
+  ul {
+    padding: 0;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+
+    li {
+      margin: 5px;
+      color: $beige;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 8px 20px;
+      border-radius: 100px;
+      list-style-type: none;
+      border: 2px solid $beige;
+      text-transform: uppercase;
+    }
+  }
+
+  @media all and (min-width: $tablet) {
+    text-align: center;
+
+    h3 {
+      font-size: 32px;
+    }
+
+    ul {
+      max-width: 800px;
+      justify-content: center;
+
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+}

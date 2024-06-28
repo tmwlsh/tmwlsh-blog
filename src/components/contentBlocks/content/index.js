@@ -1,22 +1,21 @@
 import React from "react";
-import Container from "../container";
+import Container from "../../container";
 import { Controller, Scene } from 'react-scrollmagic';
 
 import * as styles from "./styles.module.scss";
 
-const Footer = () => {
-
+const TwoImage = ({content}) => {
   return (
     <Controller>
       <Scene classToggle={styles.reveal} triggerHook="onEnter" offset="100">
-        <footer className={`${styles.footer} trigger`}>
+        <div className={styles.content}>
           <Container>
-            <p>Thank you</p>
+            <p dangerouslySetInnerHTML={{__html: content.content}} />
           </Container>
-        </footer>
+        </div>
       </Scene>
     </Controller>
   )
 }
 
-export default Footer;
+export default TwoImage;

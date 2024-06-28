@@ -1,0 +1,44 @@
+@import "../../sass/variables.scss";
+
+.layout {
+  display: block;
+  position: relative;
+
+  .cursor {
+    display: none;
+    left: 0;
+    top: 0;
+    position: relative;
+    z-index: 1000;
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    transition: $transition;
+    border-radius: 16px;
+    mix-blend-mode: difference;
+    border: 1px solid $beige;
+    pointer-events: none;
+  }
+
+  .cursor-two {
+    display: none;
+    left: 13px;
+    top: 13px;
+    position: relative;
+    z-index: 1000;
+    width: 5px;
+    height: 5px;
+    position: fixed;
+    transition: $transition;
+    border-radius: 16px;
+    mix-blend-mode: difference;
+    background-color: $beige;
+    pointer-events: none;
+  }
+
+  @media all and (min-width: $desktop) {
+    .cursor, .cursor-two {
+      display: block;
+    }
+  }
+}

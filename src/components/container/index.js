@@ -1,14 +1,13 @@
-import * as React from "react";
+import React from "react";
 
 import * as styles from "./styles.module.scss";
 
 const Container = ({children, size="large"}) => {
-  const classes = [styles.container, styles[size]];
   return (
-    <div className={classes.join(" ")}>
+    <div className={`${styles.container} ${styles[size]}`}>
       {children}
     </div>
   )
 }
 
-export { Container };
+export default Container;

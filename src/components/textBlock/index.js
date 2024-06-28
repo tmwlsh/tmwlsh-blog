@@ -4,19 +4,18 @@ import { Controller, Scene } from 'react-scrollmagic';
 
 import * as styles from "./styles.module.scss";
 
-const Footer = () => {
-
+const TextBlock = ({text}) => {
   return (
     <Controller>
       <Scene classToggle={styles.reveal} triggerHook="onEnter" offset="100">
-        <footer className={`${styles.footer} trigger`}>
-          <Container>
-            <p>Thank you</p>
+        <section className={`${styles.textBlock} trigger`}>
+          <Container size="medium">
+            <p>{text}</p>
           </Container>
-        </footer>
+        </section>
       </Scene>
     </Controller>
   )
 }
 
-export default Footer;
+export default TextBlock;

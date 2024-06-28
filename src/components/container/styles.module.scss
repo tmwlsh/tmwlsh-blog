@@ -1,10 +1,10 @@
 .container {
-  display: block;
   margin: 0 auto;
   padding: 0 30px;
+  position: relative;
 
   &.small {
-    max-width: 840px;
+    max-width: 640px;
   }
 
   &.medium {

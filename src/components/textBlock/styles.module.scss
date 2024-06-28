@@ -1,0 +1,26 @@
+@import "../../sass/variables.scss";
+
+.text-block {
+  opacity: 0;
+  text-align: left;
+  transform: translateY(30px);
+  transition: $transitionMed;
+
+  &.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  p {
+    color: $beige;
+    font-size: 16px;
+  }
+
+  @media all and (min-width: $desktop) {
+    text-align: center;
+
+    p {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../sass/variables.scss";
+
+.two-image {
+  margin: 25px 0;
+  padding: 25px 0;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: $transitionMed;
+
+  &.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media all and (min-width: $tablet) {
+    margin: 50px 0;
+    padding: 50px 0;
+  }
+}
+
+.two-image-inner {
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+
+    &:first-of-type {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media all and (min-width: $tablet) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    img {
+      width: calc(50% - 25px);
+      flex: 0 0 calc(50% - 25px);
+
+      &:first-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,21 +1,18 @@
-@import "./fonts.scss";
-
 // colours
-
-$black: #000000;
 $white: #ffffff;
+$black: #000000;
+$green: #435548;
+$beige: #FFF1E4;
 
 // fonts
-
-$poppins: 'Poppins', sans-serif;
-$yaseva: 'Yeseva One', cursive;
+@import url("https://use.typekit.net/btf1vku.css");
+$termina: 'Termina', sans-serif;
 
 // breakpoints
-
 $mobile: 768px;
-$tablet: 960px;
-$desktop: 1400px;
+$tablet: 940px;
+$desktop: 1080px;
 
 // misc
-
-$transition: cubic-bezier(.9,.23,.18,.77);
+$transition: cubic-bezier(.86,.12,.16,.88);
+$transitionMed: 0.8s $transition;

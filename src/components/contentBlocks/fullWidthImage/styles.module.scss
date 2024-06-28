@@ -1,0 +1,26 @@
+@import "../../../sass/variables.scss";
+
+.full-width-image {
+  margin: 25px 0;
+  padding: 25px 0;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: $transitionMed;
+
+  &.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+  }
+
+  @media all and (min-width: $tablet) {
+    margin: 50px 0;
+    padding: 50px 0;
+  }
+}

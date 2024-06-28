@@ -1,0 +1,30 @@
+@import "../../../sass/variables.scss";
+
+.content {
+  margin: 25px 0;
+  padding: 25px 0;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: $transitionMed;
+
+  &.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  p {
+    color: $beige;
+    font-size: 16px;
+  }
+
+  @media all and (min-width: $desktop) {
+    margin: 50px 0;
+    padding: 50px 0;
+    text-align: center;
+
+    p {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,25 +1,57 @@
 const path = require('path')
-const { urlMap } = require('./src/utils/urls')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const nodes = await graphql(`
+  const workNodes = await graphql(`
     {
-      allPrismicBlogPost {
+      allWpWork {
         nodes {
+          title
+          slug
+          uri
           id
-          uid
-          data {
-            title {
-              text
-            }
-            excerpt {
-              text
-            }
-            date(formatString: "DD MMMM YYYY")
-            rich_text {
-              html
+          workItem {
+            workItemContent {
+              ... on WpWork_Workitem_WorkItemContent_FullWidthImage {
+                image {
+                  mediaItemUrl
+                }
+                fieldGroupName
+              }
+              ... on WpWork_Workitem_WorkItemContent_Content {
+                content
+                fieldGroupName
+              }
+              ... on WpWork_Workitem_WorkItemContent_TwoImage {
+                imageOne {
+                  image {
+                    mediaItemUrl
+                  }
+                }
+                imageTwo {
+                  image {
+                    mediaItemUrl
+                  }
+                }
+                fieldGroupName
+              }
+              ... on WpWork_Workitem_WorkItemContent_TextPills {
+                title
+                pills {
+                  text
+                }
+                fieldGroupName
+              }
+              ... on WpWork_Workitem_WorkItemContent_TitleTextColumns {
+                columns {
+                  singleColumn {
+                    text
+                    title
+                  }
+                }
+                fieldGroupName
+              }
             }
           }
         }
@@ -27,14 +59,15 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  nodes.data.allPrismicBlogPost.nodes.forEach((post) => {
-    // Creates blog posts at /blog/post_url.
-    console.log(`Creating blog posts at ${post.uid}.`)
+  workNodes.data.allWpWork.nodes.forEach(workItem => {
+    // Creates work items.
     createPage({
-      path: `${urlMap.blog_post}${post.uid}`,
-      component: path.resolve(__dirname, 'src/templates/post.js'),
-      context: { ...post },
+      path: `/work/${workItem.slug}`,
+      component: path.resolve(__dirname, 'src/templates/work.js'),
+      context: { ...workItem },
     })
-  })
+
+  });
+
 
 }
