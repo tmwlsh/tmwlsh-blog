@@ -17,7 +17,7 @@ const Header = () => {
               <House />
               <h2>TMWLSH</h2>
             </Link>
-            <h1>TMMWLSH</h1>
+            <h1>TMWLSH</h1>
             <a target="_blank" href="mailto:hello@tmwlsh.co.uk?subject=Website Enquiry">hello@tmwlsh.co.uk</a>
           </Container>
         </header>
